@@ -82,6 +82,8 @@ local _createUdpSocket = socket.protect(function(localport)
 	try(sock:setoption("broadcast", true))
 	try(sock:settimeout(0))
 	
+    try(sock:setsockname('*', 0))
+
 	if localport then
 		try(sock:setsockname( '*', localport))
 	end	

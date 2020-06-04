@@ -559,7 +559,7 @@ function screensaverWindow(self, window, scrollAllowed, ssAllowedActions, mouseA
 
 	if not self:isSoftPowerOn() then
 		--allow input to pass through, so that the following listeners will be honored
-	        self:_setSSAllowedActions(true, {}, true)
+	        --self:_setSSAllowedActions(true, {}, true)
 
 		window:ignoreAllInputExcept(    { "power", "power_on", "power_off" },
 		                                function(actionEvent)
